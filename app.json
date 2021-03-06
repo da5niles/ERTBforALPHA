@@ -1,0 +1,40 @@
+{
+  "name": "FFF",
+  "description": "QQQ.",
+  "keywords": [
+    "telegram",
+    "best",
+    "open",
+    "source",
+    "ERTB"
+  ],
+  "success_url": "https://telegram.dog/da5niles",
+  "website": "https://github.com/da5niles/ERTBforALPHA",
+  "repository": "https://github.com/da5niles/ERTBforALPHA",
+  "env": {
+    "token": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    }
+    }
+  }
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
